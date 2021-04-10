@@ -10,7 +10,21 @@ We are working towards complete C# support.
 
 In this example, we take numbers from command line and output the sum.
 C# requires us to create a project first. First we need to install dotnet
-SDK 3.1 with `sudo apt install dotnet-sdk-3.1`. Then run the command:
+SDK 3.1.
+
+If you are installing on Ubuntu 18.04 then follow the below to install
+```
+wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+sudo add-apt-repository universe
+sudo apt-get install apt-transport-https
+sudo apt-get update
+sudo apt-get install dotnet-sdk-3.1 (chose the version)
+```
+
+all other versions with `sudo apt install dotnet-sdk-3.1`.
+
+Then run the command:
 
 ```
 dotnet new console -o sum
